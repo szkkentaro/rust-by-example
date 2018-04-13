@@ -1,4 +1,4 @@
-#[allow(unused_variables)]
+#[allow(unused_variables, unused_assignments)]
 fn main() {
     // Variable can be type annotated
     let logical: bool = true;
