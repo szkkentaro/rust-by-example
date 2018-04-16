@@ -26,8 +26,15 @@ fn rect_area(rect: Rectangle) -> f32 {
     (p1_x - p2_x).abs() * (p1_y - p2_y).abs()
 }
 
-// Add a function square which takes a Point and a f32 as arguments, and returns a Rectangle with its lower left corner on the point, and a width and height corresponding to the f32.
-// fn square() {}
+// Add a function square which takes a Point and a f32 as arguments,
+// and returns a Rectangle with its lower left corner on the point, and a width and height corresponding to the f32.
+fn square(point: Point, f: f32) -> Rectangle {
+    let Point { x, y } = point;
+    Rectangle {
+        p1: point,
+        p2: Point { x: x + f, y: y + f },
+    }
+}
 
 // A unit struct
 struct Nil;
@@ -67,9 +74,13 @@ fn main() {
     println!("destucutered values : ({}, {})", integer, decimal);
 
     // Activity
+    // rect_area
     let rect = Rectangle {
         p1: Point { x: 4.5, y: 4.5 },
         p2: Point { x: 2.5, y: 2.5 },
     };
     println!("{}", rect_area(rect));
+
+    // square
+    println!("{:?}", square(Point { x: 0.0, y: 0.0 }, 3.0));
 }
