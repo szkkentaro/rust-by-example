@@ -1,3 +1,6 @@
+#![crate_type = "lib"]
+#![crate_name = "foo"]
+
 pub fn public_function() {
     println!("called rary's function()");
 }
