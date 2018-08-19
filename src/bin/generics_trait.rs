@@ -17,6 +17,6 @@ fn main() {
     // Deallocate `empty` and `null`
     empty.double_drop(null);
 
-    empty;
-    null;
+    // empty;
+    // null;
 }
