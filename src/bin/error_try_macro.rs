@@ -10,7 +10,7 @@ fn multiply(first_number_str: &str, second_number_str: &str) -> Result<i32, Pars
 fn print(result: Result<i32, ParseIntError>) {
     match result {
         Ok(n) => println!("n is {}", n),
-        Err(e) => print("Error: {}", e),
+        Err(e) => println!("Error: {}", e),
     }
 }
 
